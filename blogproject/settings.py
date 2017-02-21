@@ -28,20 +28,20 @@ ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'your_email@gmail.com'
+EMAIL_HOST_USER = 'bejanvadim@gmail.com'
 EMAIL_HOST_PASSWORD = 'password'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 FILE_UPLOAD_MAX_MEMORY_SIZE = 35000000
 
-DISQUS_API_KEY = 'your_disqus_api_key'
-DISQUS_WEBSITE_SHORTNAME = 'your_disques_website_name'
+DISQUS_API_KEY = '5SAJOVv5ZIWmaeU3JOg8waxOiHFFBDLvVdjtyRjpKeyfaOwHXLMAsjJKnWmLDYgh'
+DISQUS_WEBSITE_SHORTNAME = 'https://http-vladimirb-pythonanywhere-com.disqus.com/admin/'
 
 # No Recaptha SITE_KEY and SECRET KEY
 # https://www.google.com/recaptcha
-NORECAPTCHA_SITE_KEY = "key_key_key_key"
-NORECAPTCHA_SECRET_KEY = "key_key_key_key"
+NORECAPTCHA_SITE_KEY = "6LcsVxYUAAAAAKbRS4CneuGuJZb2Pn5O7CnpKjGk"
+NORECAPTCHA_SECRET_KEY = "6LcsVxYUAAAAAIteMV6o3PBDLus1ooqkSbiZtTH_"
 
 # Application definition
 INSTALLED_APPS = [
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
 
     'django.contrib.sitemaps',
     'django.contrib.sites',
-
+    'markdown',
     'disqus',
     'redactor',
     'nocaptcha_recaptcha',
@@ -114,14 +114,14 @@ WSGI_APPLICATION = 'blogproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-"""
+
 
 # Config with postgresql - psql (9.5.4, server 9.3.14)
 # $ sudo su - postgres
@@ -131,7 +131,7 @@ DATABASES = {
 # postgres=# GRANT ALL PRIVILEGES ON DATABASE database_nme TO database_user;
 # See this docs for more; https://goo.gl/9ONJKX
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'database_nme',
@@ -141,7 +141,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -166,7 +166,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'Asia/Jakarta'
+TIME_ZONE = 'Europe/Bucharest'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -176,14 +176,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    '/path/to/yourenv/blogproject/static',
+    '/home/VladimirB/Django-Blog-Python-Learning/static/',
 )
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = '/path/to/yourenv/blogproject/static'
+#STATIC_ROOT = '/home/VladimirB/Django-Blog-Python-Learning/static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/path/to/yourenv/blogproject/media'
+MEDIA_ROOT = 'home/VladimirB/Django-Blog-Python-Learning/media/'
 
 # Editor Redactor
 import time
